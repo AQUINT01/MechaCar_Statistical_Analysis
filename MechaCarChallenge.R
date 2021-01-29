@@ -16,3 +16,9 @@ lot_summary <- susCoil_table %>% group_by(Manufacturing_Lot) %>% summarize(Mean=
 #Deliverable 3: T-Tests on Suspension Coils
 
 t.test(susCoil_table$PSI,mu=mean(1500)) #compare all manufacturing lots versus population means
+
+t.test(subset(susCoil_table,Manufacturing_Lot== 'Lot1')$PSI,mu=1500) #compare lot1 versus population mean1500
+
+t.test(subset(susCoil_table,Manufacturing_Lot== 'Lot2')$PSI,mu=1500) #compare lot2 versus population mean1500
+
+t.test(subset(susCoil_table,Manufacturing_Lot== 'Lot3')$PSI,mu=1500) #compare lot3 versus population mean1500
